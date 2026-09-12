@@ -1,8 +1,9 @@
 # Dependency notices
 
-The starter's own software/documentation licence remains **pending owner
-approval**. This file records third-party dependency terms; it does not grant a
-licence for the starter or for family/archive material.
+The starter's code, documentation, skills and fictional examples use the
+[MIT licence](LICENSE), approved by the owner on 2026-09-12. This file records
+third-party dependency terms; it does not relicense those dependencies or grant
+rights to family/archive material.
 
 No dependency implementation, virtual environment or `node_modules` directory
 is vendored or copied by the initializer. Explicit package installation retains
@@ -58,5 +59,5 @@ The test harness uses Python's standard library and Node's built-in test runner.
 No third-party test fixtures, document images or family manuscripts are included.
 
 Acquired photographs, records, audio, transcripts and living-person information
-have separate copyright, custody, privacy and consent requirements. A future
-software licence would not authorise their publication.
+have separate copyright, custody, privacy and consent requirements. The
+software licence does not authorise their publication.

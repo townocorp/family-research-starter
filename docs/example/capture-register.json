@@ -1,0 +1,20 @@
+{
+  "evidence_id": "E002",
+  "source_type": "local",
+  "source_date": "2026-09-12",
+  "captured": "2026-09-12",
+  "source_locator": "Fictional register text, lines 2-4; imagined entry 17 dated 4 September 1911",
+  "custody": "Created for the starter's fictional example; no real school register or archive used",
+  "rights": "Original fictional example under the starter's MIT licence",
+  "consent": "No real pupil, institution or personal data; fictional demonstration only",
+  "claim": "The invented register lists Person P002's residence as Place B in 1911.",
+  "basis": "source",
+  "confidence": "Supported",
+  "rationale": "Line 3 supports the narrow statement about the register's contents. It does not establish permanent residence or a move date. No source opposes what this fixture says; E001 challenges the inferred event chronology, assessed separately in the report.",
+  "people": ["P002"],
+  "round": 1,
+  "supporting_evidence": ["E002"],
+  "opposing_evidence": [],
+  "summary": "Fictional source statement; identity and permanent residence are not independently established.",
+  "url": ""
+}

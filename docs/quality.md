@@ -25,6 +25,12 @@ correction, source-span metadata, a completed scoped negative distinct from a
 blocked task, and checked paired reports. It also checks existing-canon mode and
 that originals/existing-store sentinels do not change.
 
+The starter checkout's fictional public example is exercised from a newly
+initialised temporary project. Its checked-in HTML is checked against the same
+draft and captures as a freshly generated DOCX, so a stale or altered preview
+fails the gate. Licence and dependency-notice preservation is checked in both
+canonical-store modes.
+
 Failure tests cover existing destinations/outputs, unsafe paths, corrupt inputs,
 undefined or swapped citations/media/captions, exact spans, source changes,
 print-DPI boundaries and delivery/rollback faults. Fault tests assert that the

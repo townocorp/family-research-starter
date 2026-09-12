@@ -10,7 +10,7 @@ import subprocess
 import sys
 
 IGNORED = {".git", ".venv", "node_modules", "__pycache__", ".pytest_cache"}
-ROOT_FILES = {"README.md", "AGENTS.md", "CLAUDE.md", ".gitignore", ".gitattributes", "requirements.txt", "THIRD_PARTY_NOTICES.md"}
+ROOT_FILES = {"README.md", "AGENTS.md", "CLAUDE.md", ".gitignore", ".gitattributes", "requirements.txt", "LICENSE", "THIRD_PARTY_NOTICES.md"}
 ROOT_DIRS = {".github", ".claude", "docs", "templates", "tools", "tests"}
 SUFFIXES = {".md", ".py", ".js", ".cjs", ".json", ".html", ".txt", ".yml"}
 PATTERNS = (

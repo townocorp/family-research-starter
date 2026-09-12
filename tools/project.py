@@ -10,7 +10,7 @@ from _lib_capture.atomic import write_new
 
 SOURCE_ROOT = Path(__file__).resolve().parent.parent
 RUNTIME_FILES = (
-    "requirements.txt", "THIRD_PARTY_NOTICES.md",
+    "requirements.txt", "LICENSE", "THIRD_PARTY_NOTICES.md",
     "tools/starter.py", "tools/project.py", "tools/capture.py",
     "tools/_lib_capture/__init__.py", "tools/_lib_capture/atomic.py",
     "tools/_lib_capture/slug.py", "tools/_lib_capture/sidecar.py",

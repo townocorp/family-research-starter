@@ -38,12 +38,14 @@ changes remain human decisions.
 
 ## Software licensing and candidate review
 
-Licensing of the starter code and documentation is pending explicit owner
-review. MIT is a proposal, not a licence grant. No `LICENSE` or package-root
-licence claim is made at this stage. Dependencies retain their own notices and
-terms; see [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
+The owner approved the [MIT licence](../LICENSE) on 2026-09-12 for the starter's
+code, documentation, skills and fictional examples. It permits use, adaptation
+and redistribution, including commercial use, with the required copyright and
+permission notice retained and without warranty. Initialised private projects
+receive the licence alongside the copied runtime. Dependencies retain their
+own notices and terms; see [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md).
 
-Any eventual software licence applies only within its stated scope, not to
+The software licence applies only within its stated scope, not to
 acquired archive records, photographs, audio, transcripts, people facts or
 publication rights.
 
@@ -57,3 +59,8 @@ history. Use only synthetic markers in committed tests.
 Visibility changes, collaborator invitations, commits, pushing and public
 distribution require explicit owner approval. Do not create a share archive or
 copy another private repository's history.
+
+For a public starter, keep examples entirely fictional and label the sources and
+outputs accordingly. Renaming people from a private project is not synthetic
+data. A public figure's life is real research too: it needs genuine sources,
+rights review and a separate project, not invented records presented as history.

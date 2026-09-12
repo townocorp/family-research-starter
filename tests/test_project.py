@@ -1,3 +1,4 @@
+import json
 from pathlib import Path
 import stat
 from types import SimpleNamespace
@@ -14,6 +15,9 @@ class ProjectTests(FamilyCase):
     def test_exact_runtime_and_private_layout(self):
         for name in (*FOLDERS, *RUNTIME_FILES):
             self.assertTrue((self.family / name).exists(), name)
+        for name in RUNTIME_FILES:
+            if name.endswith(".md"):
+                self.assertEqual(local_link_findings(self.family / name, self.family), [], name)
         self.assertFalse((self.family / ".git").exists())
         self.assertFalse((self.family / ".venv").exists())
         self.assertFalse((self.family / "tools/report/scripts/node_modules").exists())
@@ -34,6 +38,20 @@ class ProjectTests(FamilyCase):
         self.assertFalse((dest / "research/facts.md").exists())
         self.assertFalse((dest / ".claude").exists())
         self.assertEqual(load_project(dest)[1]["canon"]["location"], str(store))
+
+    def test_licence_and_dependency_notices_are_preserved_in_both_canon_modes(self):
+        existing = initialise(self.parent / "licensed-existing", owner="P002", canon="existing",
+                              canon_location="Owner-managed application", skills=False)
+        for root in (self.family, existing):
+            for name in ("LICENSE", "THIRD_PARTY_NOTICES.md"):
+                self.assertEqual((root / name).read_bytes(), (ROOT / name).read_bytes())
+                self.assertEqual(local_link_findings(root / name, root), [])
+            scripts = root / "tools/report/scripts"
+            manifest = json.loads((scripts / "package.json").read_text(encoding="utf-8"))
+            lock = json.loads((scripts / "package-lock.json").read_text(encoding="utf-8"))
+            self.assertEqual(manifest["license"], "MIT")
+            self.assertEqual(lock["packages"][""]["license"], "MIT")
+            self.assertFalse((root / "docs/example").exists())
 
     def test_existing_empty_or_populated_destination_refused(self):
         for name in ("empty", "populated"):

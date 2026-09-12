@@ -1,14 +1,36 @@
 # Family research starter
 
-A practical, evidence-led workflow with **included research and report skills**
-for GitHub Copilot and Claude Code. Create a private family folder, collect what
-you already have, record evidence and uncertainty, work through bounded research
-rounds, and produce checked DOCX and self-contained HTML reports.
+**Family history needs evidence, not a more confident guess.**
+
+An **early-stage, evidence-led family research starter for GitHub Copilot and
+Claude Code**, with included research and report skills. Create a private family
+folder, collect what you already have, record evidence and uncertainty, work
+through bounded research rounds, and produce checked DOCX and self-contained
+HTML reports.
+
+I'm Mike Townsend. I developed the process and skills over six months across five
+private family research projects. This repository is the reusable, early-stage
+version of that work, not the families' records or findings. That experience is
+the background to the workflow, not a claim that this software is mature or that
+an AI can establish historical truth. A tidy report can still be wrong (mine
+included). Keep the sources and the unanswered questions.
 
 **Keep real research outside this checkout.** This shareable starter contains
 tools, generic templates and synthetic tests, not a family's records. The
 initializer creates no Git repository, remote, account, upload or subscription.
-Software licensing is pending owner review; redistribution is not yet cleared.
+The starter's code, documentation, skills and fictional examples are available
+under the [MIT licence](LICENSE): free to use, adapt and redistribute, including
+commercially, while retaining the required notice. It comes without warranty.
+That licence does not grant rights to anyone's family or archive material.
+
+## See an example
+
+[Read the fictional P001/P002 case](docs/example/README.md): a remembered move in
+1912, a register entry from 1911, and a report that leaves the move date unresolved
+rather than choosing the tidier story. All people, places, documents and events
+are invented, not anonymised family research or a public figure's biography.
+The example includes a generated HTML preview and steps to reproduce both the
+Word and HTML reports locally.
 
 ## Quick start
 

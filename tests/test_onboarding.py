@@ -3,10 +3,41 @@ import json
 from pathlib import Path
 import unittest
 
-from support import FamilyCase, image_bytes, metadata, report_markdown
+from support import FamilyCase, ROOT, image_bytes, metadata, report_markdown
+from check_report import check_report
+from markdown_to_data import convert
 
 
 class OnboardingTests(FamilyCase):
+    def test_fictional_example_reproduces_checked_preview_without_changing_canon(self):
+        example = ROOT / "docs" / "example"
+        originals = {}
+        for identity, name in (("E001", "memory"), ("E002", "register")):
+            source = self.family / "originals" / "stories" / (identity + ".txt")
+            originals[source] = (example / (name + ".txt")).read_bytes()
+            source.write_bytes(originals[source])
+            metadata_path = self.family / "evidence" / (identity + ".json")
+            metadata_path.write_bytes((example / ("capture-" + name + ".json")).read_bytes())
+            self.cli("capture", "--project", ".", "--file", source, "--metadata", metadata_path)
+        self.assertNotIn("Person P001", originals[self.family / "originals/stories/E002.txt"].decode("utf-8"))
+        draft = self.family / "reports/drafts/example.md"
+        draft.write_bytes((example / "report.md").read_bytes())
+        canon = (self.family / "research/facts.md").read_bytes()
+        self.cli("check", "--project", ".")
+        response = self.cli("report", "--project", ".", "--draft", "reports/drafts/example.md",
+                            "--output", "reports/releases/example")
+        delivered = json.loads(response.stdout)
+        self.assertTrue(delivered["delivered"])
+        self.assertEqual(delivered["check"]["reference_count"], 2)
+        self.assertEqual(delivered["check"]["errors"], [])
+        data = self.family / "reports/drafts/example.json"
+        data.write_text(json.dumps(convert(draft, self.family)), encoding="utf-8")
+        preview_check = check_report(data, Path(delivered["docx"]), example / "report.html", self.family)
+        self.assertEqual(preview_check["errors"], [])
+        self.assertEqual((self.family / "research/facts.md").read_bytes(), canon)
+        for source, original in originals.items():
+            self.assertEqual(source.read_bytes(), original)
+
     def test_entire_fresh_project_workflow_using_installed_commands(self):
         family = self.family
         original_text = b"Person P001 remembers Person P002.\r\nThis is a synthetic eulogy fixture.\n"
