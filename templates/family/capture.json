@@ -1,0 +1,20 @@
+{
+  "evidence_id": "E001",
+  "source_type": "local",
+  "source_date": "unknown",
+  "captured": "REPLACE_WITH_ISO_DATE",
+  "source_locator": "REPLACE_WITH_PAGE_LINE_TIME_OR_RECORD_LOCATOR",
+  "custody": "REPLACE_WITH_SUPPLIER_CREATOR_CONTEXT_AND_CUSTODY",
+  "rights": "unknown",
+  "consent": "REPLACE_WITH_PERMITTED_USES_AND_RESTRICTIONS",
+  "claim": "REPLACE_WITH_EXACT_ATTRIBUTED_CLAIM",
+  "basis": "source",
+  "confidence": "Unassessed",
+  "rationale": "REPLACE_WITH_SCOPE_LIMITATIONS_AND_ASSESSMENT_REASON",
+  "people": ["P001"],
+  "round": 0,
+  "supporting_evidence": [],
+  "opposing_evidence": [],
+  "summary": "REPLACE_WITH_SOURCE_SUMMARY_NOT_AN_INVENTED_CONCLUSION",
+  "url": ""
+}

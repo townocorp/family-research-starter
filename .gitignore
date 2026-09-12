@@ -16,3 +16,12 @@ _search_index/
 *.sqlite-wal
 *.sqlite-shm
 .DS_Store
+originals/
+derived/
+evidence/
+research/
+reports/
+project.json
+*.docx
+*.pdf
+.coverage

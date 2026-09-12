@@ -1,0 +1,3 @@
+*
+# Private research is excluded if Git is later created accidentally.
+# This file is not an access control or an AI-provider privacy setting.

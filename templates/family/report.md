@@ -1,0 +1,20 @@
+---
+title: "REPLACE_REPORT_TITLE"
+author: "P001"
+date: "unknown"
+round: 1
+---
+
+# Question and scope
+
+REPLACE_WITH_OWNER_APPROVED_QUESTION_AND_LIMITS.[^1]
+
+# Findings and uncertainty
+
+REPLACE_WITH_ATTRIBUTED_FINDINGS_AND_ALTERNATIVE_EXPLANATIONS.[^1]
+
+# Corrections and open questions
+
+- REPLACE_WITH_CORRECTIONS_AND_NEXT_QUESTION.
+
+[^1]: E001 | REPLACE_PRECISE_LOCATOR | REPLACE_FULL_SOURCE_CITATION
